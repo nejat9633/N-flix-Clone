@@ -3,17 +3,16 @@
   gap: 1.5rem;
   align-items: center;
 }
-.leftNav li {
-  /* white-space: nowrap; */
-  /* flex-shrink: 0; */
+.links li {
+  cursor: pointer;
 }
 .rightNavContainer {
   display: flex;
   justify-content: flex-end;
   flex: 1;
 }
+
 .navbar {
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,13 +21,41 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999;
-  transition: all 0.5s;
-  transition-timing-function: ease-in;
+  z-index: 1000;
+  transition: all 0.3s ease ;
   color: white;
-
 }
 
 .logo {
   width: 5rem;
+}
+.menu {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px){
+   .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    display: none;
+    padding-bottom: 2rem;
+   }
+   .links.active{
+    display: flex;
+   }
+   .links li {
+    text-align: center;
+   }
+  .menu {
+    display: block;
+  }
+  .logo{
+    display: none;
+  }
 }
