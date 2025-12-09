@@ -58,6 +58,7 @@ function Footer() {
           </div>
           <div>
             <p className={style.copyright}>&copy; 1997-2024 Netflix,Inc.</p>
+            <p>Disclaimer: This page is for educational purpose only.</p>
           </div>
         </div>
       </footer>
